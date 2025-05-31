@@ -1,12 +1,51 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart-Guide | Discover Top Social Media Channels</title>
-    <meta name="description" content="Curated directory of the best YouTube, Facebook, and TikTok channels by category">
 
-    <!-- Tailwind CSS via CDN (for production, consider proper installation) -->
+    <!-- Primary SEO Meta Tags -->
+    <title>Smart-Guide | Discover Top YouTube, Facebook & TikTok Channels by Category</title>
+    <meta name="description"
+          content="Comprehensive directory of the best social media channels across YouTube, Facebook and TikTok. Find top creators in Technology, Education, Cooking, Fitness and more.">
+    <meta name="keywords"
+          content="YouTube channels, Facebook pages, TikTok creators, social media directory, top influencers, best content creators">
+    <meta name="author" content="Smart-Guide Team">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Smart-Guide | Discover Top Social Media Channels">
+    <meta property="og:description" content="Find the best YouTube, Facebook and TikTok channels organized by category">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smart-guide.example.com">
+    <meta property="og:image" content="https://smart-guide.example.com/assets/social-preview-1200x630.jpg">
+    <meta property="og:image:alt" content="Smart-Guide social media channels directory">
+    <meta property="og:site_name" content="Smart-Guide">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Smart-Guide | Discover Top Social Media Channels">
+    <meta name="twitter:description"
+          content="Find the best YouTube, Facebook and TikTok channels organized by category">
+    <meta name="twitter:image" content="https://smart-guide.example.com/assets/social-preview-1200x630.jpg">
+    <meta name="twitter:site" content="@smartguide">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://smart-guide.example.com">
+
+    <!-- Favicon and App Icons -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- CSS Resources -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,50 +60,97 @@
             }
         }
     </script>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          media="print" onload="this.media='all'">
 
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Smart-Guide",
+            "url": "https://smart-guide.example.com",
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://smart-guide.example.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+            },
+            "description": "Directory of top social media channels across multiple platforms",
+            "publisher": {
+                "@type": "Organization",
+                "name": "Smart-Guide",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://smart-guide.example.com/assets/logo.png"
+                }
+            }
+        }
+    </script>
 
     <style>
         body {
             font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
         }
+
         .channel-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
+<!-- Skip to Content Link -->
+<a href="#main-content"
+   class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-white focus:px-4 focus:py-2 focus:z-50">Skip
+    to main content</a>
+
 <!-- Navigation -->
-<nav class="bg-white shadow-lg">
+<nav class="bg-white shadow-lg" aria-label="Main navigation">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <i class="fas fa-compass text-primary text-2xl mr-2"></i>
-                    <span class="text-xl font-bold text-dark">Smart-Guide</span>
+                    <a href="/" aria-label="Smart-Guide Home">
+                        <i class="fas fa-compass text-primary text-2xl mr-2" aria-hidden="true"></i>
+                        <span class="text-xl font-bold text-dark">Smart-Guide</span>
+                    </a>
                 </div>
                 <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-                    <a href="#" class="border-primary text-dark inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                        Home
-                    </a>
-                    <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                        Categories
-                    </a>
-                    <a href="#" class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">
-                        Submit Channel
-                    </a>
+                    <a href="/"
+                       class="border-primary text-dark inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
+                       aria-current="page">Home</a>
+                    <a href="/categories"
+                       class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Categories</a>
+                    <a href="/submit"
+                       class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Submit
+                        Channel</a>
+                    <a href="/blog"
+                       class="border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Blog</a>
                 </div>
             </div>
             <div class="hidden sm:ml-6 sm:flex sm:items-center">
                 <div class="relative">
-                    <input type="text" placeholder="Search channels..." class="border border-gray-300 rounded-full py-1 px-4 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-                    <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary">
-                        <i class="fas fa-search"></i>
+                    <label for="search" class="sr-only">Search channels</label>
+                    <input type="text" id="search" placeholder="Search channels..."
+                           class="border border-gray-300 rounded-full py-1 px-4 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+                    <button class="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-primary"
+                            aria-label="Search">
+                        <i class="fas fa-search" aria-hidden="true"></i>
                     </button>
                 </div>
             </div>
@@ -73,160 +159,254 @@
 </nav>
 
 <!-- Hero Section -->
-<header class="bg-gradient-to-r from-primary to-secondary text-white py-16">
+<header class="bg-gradient-to-r from-primary to-secondary text-white py-16" role="banner">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-4">Discover the Best Social Media Channels</h1>
-        <p class="text-xl mb-8 max-w-3xl mx-auto">Curated directory of top YouTube, Facebook, and TikTok channels organized by category</p>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">Curated directory of top YouTube, Facebook, and TikTok channels
+            organized by category. Find the best content creators in your favorite niches.</p>
         <div class="flex flex-wrap justify-center gap-4">
-            <button class="bg-white text-primary px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition">Browse Categories</button>
-            <button class="bg-transparent border-2 border-white px-6 py-2 rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition">Submit Channel</button>
+            <a href="/categories"
+               class="bg-white text-primary px-6 py-2 rounded-full font-medium hover:bg-opacity-90 transition">Browse
+                Categories</a>
+            <a href="/submit"
+               class="bg-transparent border-2 border-white px-6 py-2 rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition">Submit
+                Channel</a>
         </div>
     </div>
 </header>
 
 <!-- Main Content -->
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<main id="main-content" role="main" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Platform Tabs -->
-    <div class="border-b border-gray-200 mb-8">
-        <nav class="-mb-px flex space-x-8">
-            <button class="border-primary text-primary whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
-                <i class="fab fa-youtube mr-2"></i> YouTube
-            </button>
-            <button class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
-                <i class="fab fa-facebook mr-2"></i> Facebook
-            </button>
-            <button class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm">
-                <i class="fab fa-tiktok mr-2"></i> TikTok
-            </button>
-        </nav>
-    </div>
+    <section aria-labelledby="platforms-heading">
+        <h2 id="platforms-heading" class="sr-only">Social Media Platforms</h2>
+        <div class="border-b border-gray-200 mb-8">
+            <nav class="-mb-px flex space-x-8" aria-label="Platform navigation">
+                <button class="border-primary text-primary whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm platform-tab"
+                        aria-current="page">
+                    <i class="fab fa-youtube mr-2" aria-hidden="true"></i> YouTube
+                </button>
+                <button class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm platform-tab">
+                    <i class="fab fa-facebook mr-2" aria-hidden="true"></i> Facebook
+                </button>
+                <button class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm platform-tab">
+                    <i class="fab fa-tiktok mr-2" aria-hidden="true"></i> TikTok
+                </button>
+            </nav>
+        </div>
+    </section>
 
     <!-- Category Filter -->
-    <div class="mb-8">
-        <h2 class="text-lg font-medium text-dark mb-4">Filter by Category</h2>
-        <div class="flex flex-wrap gap-2">
-            <button class="bg-primary text-white px-4 py-1 rounded-full text-sm">All</button>
-            <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-sm hover:bg-gray-300">Technology</button>
-            <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-sm hover:bg-gray-300">Education</button>
-            <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-sm hover:bg-gray-300">Entertainment</button>
-            <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-sm hover:bg-gray-300">Cooking</button>
-            <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-sm hover:bg-gray-300">Fitness</button>
+    <section aria-labelledby="categories-heading">
+        <h2 id="categories-heading" class="text-lg font-medium text-dark mb-4">Browse by Category</h2>
+        <div class="flex flex-wrap gap-2" role="tablist" aria-label="Content categories">
+            <button class="bg-primary text-white px-4 py-1 rounded-full text-sm category-btn" role="tab"
+                    aria-selected="true">All
+            </button>
+            <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-sm hover:bg-gray-300 category-btn"
+                    role="tab">Technology
+            </button>
+            <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-sm hover:bg-gray-300 category-btn"
+                    role="tab">Education
+            </button>
+            <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-sm hover:bg-gray-300 category-btn"
+                    role="tab">Entertainment
+            </button>
+            <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-sm hover:bg-gray-300 category-btn"
+                    role="tab">Cooking
+            </button>
+            <button class="bg-gray-200 text-gray-700 px-4 py-1 rounded-full text-sm hover:bg-gray-300 category-btn"
+                    role="tab">Fitness
+            </button>
         </div>
-    </div>
+    </section>
 
     <!-- Channels Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Channel Card 1 -->
-        <div class="channel-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
-            <div class="relative">
-                <img src="https://via.placeholder.com/400x225?text=Tech+Channel" alt="Tech Channel" class="w-full h-48 object-cover">
-                <div class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded flex items-center">
-                    <i class="fab fa-youtube mr-1"></i> YouTube
-                </div>
-            </div>
-            <div class="p-4">
-                <div class="flex items-start">
-                    <img src="https://via.placeholder.com/50?text=T" alt="Channel Logo" class="w-12 h-12 rounded-full mr-3">
-                    <div>
-                        <h3 class="font-bold text-dark">Tech Explorers</h3>
-                        <p class="text-gray-500 text-sm">Technology • 1.2M subscribers</p>
+    <section aria-labelledby="channels-heading">
+        <h2 id="channels-heading" class="sr-only">Featured Channels</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            <!-- Channel Card 1 -->
+            <article class="channel-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                <div class="relative">
+                    <img
+                            src="/assets/tech-channel-thumbnail.jpg"
+                            alt="Tech Explorers YouTube channel thumbnail showing latest gadgets review"
+                            width="400"
+                            height="225"
+                            loading="lazy"
+                            class="w-full h-48 object-cover"
+                    >
+                    <div class="absolute top-2 right-2 bg-red-600 text-white text-xs px-2 py-1 rounded flex items-center">
+                        <i class="fab fa-youtube mr-1" aria-hidden="true"></i> YouTube
                     </div>
                 </div>
-                <p class="text-gray-600 mt-3 text-sm">Latest tech reviews, gadget unboxings, and industry news from around the world.</p>
-                <div class="mt-4 flex justify-between items-center">
-                    <a href="#" class="text-primary text-sm font-medium hover:underline">Visit Channel</a>
-                    <button class="text-gray-400 hover:text-primary">
-                        <i class="far fa-bookmark"></i>
-                    </button>
+                <div class="p-4">
+                    <div class="flex items-start">
+                        <img
+                                src="/assets/tech-explorers-logo.jpg"
+                                alt="Tech Explorers channel logo"
+                                width="48"
+                                height="48"
+                                loading="lazy"
+                                class="w-12 h-12 rounded-full mr-3"
+                        >
+                        <div>
+                            <h3 class="font-bold text-dark">Tech Explorers</h3>
+                            <p class="text-gray-500 text-sm">Technology • 1.2M subscribers</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 text-sm">Latest tech reviews, gadget unboxings, and industry news from
+                        around the world. Weekly uploads with in-depth analysis.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <a href="https://youtube.com/techexplorers"
+                           class="text-primary text-sm font-medium hover:underline" rel="noopener noreferrer">Visit
+                            Channel</a>
+                        <button class="text-gray-400 hover:text-primary" aria-label="Save Tech Explorers to favorites">
+                            <i class="far fa-bookmark" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </article>
 
-        <!-- Channel Card 2 -->
-        <div class="channel-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
-            <div class="relative">
-                <img src="https://via.placeholder.com/400x225?text=Cooking+Channel" alt="Cooking Channel" class="w-full h-48 object-cover">
-                <div class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded flex items-center">
-                    <i class="fab fa-facebook mr-1"></i> Facebook
-                </div>
-            </div>
-            <div class="p-4">
-                <div class="flex items-start">
-                    <img src="https://via.placeholder.com/50?text=C" alt="Channel Logo" class="w-12 h-12 rounded-full mr-3">
-                    <div>
-                        <h3 class="font-bold text-dark">Cooking Master</h3>
-                        <p class="text-gray-500 text-sm">Cooking • 850K followers</p>
+            <!-- Channel Card 2 -->
+            <article class="channel-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                <div class="relative">
+                    <img
+                            src="/assets/cooking-channel-thumbnail.jpg"
+                            alt="Cooking Master Facebook page thumbnail showing delicious pasta dish"
+                            width="400"
+                            height="225"
+                            loading="lazy"
+                            class="w-full h-48 object-cover"
+                    >
+                    <div class="absolute top-2 right-2 bg-blue-600 text-white text-xs px-2 py-1 rounded flex items-center">
+                        <i class="fab fa-facebook mr-1" aria-hidden="true"></i> Facebook
                     </div>
                 </div>
-                <p class="text-gray-600 mt-3 text-sm">Delicious recipes from around the world with easy-to-follow instructions for home cooks.</p>
-                <div class="mt-4 flex justify-between items-center">
-                    <a href="#" class="text-primary text-sm font-medium hover:underline">Visit Page</a>
-                    <button class="text-gray-400 hover:text-primary">
-                        <i class="far fa-bookmark"></i>
-                    </button>
+                <div class="p-4">
+                    <div class="flex items-start">
+                        <img
+                                src="/assets/cooking-master-logo.jpg"
+                                alt="Cooking Master page logo"
+                                width="48"
+                                height="48"
+                                loading="lazy"
+                                class="w-12 h-12 rounded-full mr-3"
+                        >
+                        <div>
+                            <h3 class="font-bold text-dark">Cooking Master</h3>
+                            <p class="text-gray-500 text-sm">Cooking • 850K followers</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 text-sm">Delicious recipes from around the world with easy-to-follow
+                        instructions for home cooks of all skill levels.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <a href="https://facebook.com/cookingmaster"
+                           class="text-primary text-sm font-medium hover:underline" rel="noopener noreferrer">Visit
+                            Page</a>
+                        <button class="text-gray-400 hover:text-primary" aria-label="Save Cooking Master to favorites">
+                            <i class="far fa-bookmark" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </article>
 
-        <!-- Channel Card 3 -->
-        <div class="channel-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
-            <div class="relative">
-                <img src="https://via.placeholder.com/400x225?text=Fitness+Channel" alt="Fitness Channel" class="w-full h-48 object-cover">
-                <div class="absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 rounded flex items-center">
-                    <i class="fab fa-tiktok mr-1"></i> TikTok
-                </div>
-            </div>
-            <div class="p-4">
-                <div class="flex items-start">
-                    <img src="https://via.placeholder.com/50?text=F" alt="Channel Logo" class="w-12 h-12 rounded-full mr-3">
-                    <div>
-                        <h3 class="font-bold text-dark">FitTok</h3>
-                        <p class="text-gray-500 text-sm">Fitness • 3.5M followers</p>
+            <!-- Channel Card 3 -->
+            <article class="channel-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                <div class="relative">
+                    <img
+                            src="/assets/fitness-channel-thumbnail.jpg"
+                            alt="FitTok TikTok channel thumbnail showing workout demonstration"
+                            width="400"
+                            height="225"
+                            loading="lazy"
+                            class="w-full h-48 object-cover"
+                    >
+                    <div class="absolute top-2 right-2 bg-black text-white text-xs px-2 py-1 rounded flex items-center">
+                        <i class="fab fa-tiktok mr-1" aria-hidden="true"></i> TikTok
                     </div>
                 </div>
-                <p class="text-gray-600 mt-3 text-sm">Quick workout routines, fitness tips, and motivational content in 60 seconds or less.</p>
-                <div class="mt-4 flex justify-between items-center">
-                    <a href="#" class="text-primary text-sm font-medium hover:underline">Visit Profile</a>
-                    <button class="text-gray-400 hover:text-primary">
-                        <i class="far fa-bookmark"></i>
-                    </button>
+                <div class="p-4">
+                    <div class="flex items-start">
+                        <img
+                                src="/assets/fittok-logo.jpg"
+                                alt="FitTok channel logo"
+                                width="48"
+                                height="48"
+                                loading="lazy"
+                                class="w-12 h-12 rounded-full mr-3"
+                        >
+                        <div>
+                            <h3 class="font-bold text-dark">FitTok</h3>
+                            <p class="text-gray-500 text-sm">Fitness • 3.5M followers</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 text-sm">Quick workout routines, fitness tips, and motivational content
+                        in 60 seconds or less. Perfect for busy schedules.</p>
+                    <div class="mt-4 flex justify-between items-center">
+                        <a href="https://tiktok.com/@fittok" class="text-primary text-sm font-medium hover:underline"
+                           rel="noopener noreferrer">Visit Profile</a>
+                        <button class="text-gray-400 hover:text-primary" aria-label="Save FitTok to favorites">
+                            <i class="far fa-bookmark" aria-hidden="true"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </article>
         </div>
-    </div>
+    </section>
 
     <!-- Pagination -->
-    <div class="mt-12 flex justify-center">
-        <nav class="flex items-center space-x-2">
-            <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-50">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="px-3 py-1 rounded bg-primary text-white">1</button>
-            <button class="px-3 py-1 rounded border border-gray-300 text-gray-700 hover:bg-gray-50">2</button>
-            <button class="px-3 py-1 rounded border border-gray-300 text-gray-700 hover:bg-gray-50">3</button>
-            <span class="px-2 text-gray-500">...</span>
-            <button class="px-3 py-1 rounded border border-gray-300 text-gray-700 hover:bg-gray-50">10</button>
-            <button class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-50">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </nav>
-    </div>
+    <nav class="mt-12 flex justify-center" aria-label="Channel pagination">
+        <ul class="flex items-center space-x-2">
+            <li>
+                <a href="?page=1" class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-50"
+                   aria-label="Previous page">
+                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                </a>
+            </li>
+            <li>
+                <a href="?page=1" class="px-3 py-1 rounded bg-primary text-white" aria-current="page">1</a>
+            </li>
+            <li>
+                <a href="?page=2" class="px-3 py-1 rounded border border-gray-300 text-gray-700 hover:bg-gray-50">2</a>
+            </li>
+            <li>
+                <a href="?page=3" class="px-3 py-1 rounded border border-gray-300 text-gray-700 hover:bg-gray-50">3</a>
+            </li>
+            <li class="px-2 text-gray-500">...</li>
+            <li>
+                <a href="?page=10"
+                   class="px-3 py-1 rounded border border-gray-300 text-gray-700 hover:bg-gray-50">10</a>
+            </li>
+            <li>
+                <a href="?page=2" class="px-3 py-1 rounded border border-gray-300 text-gray-500 hover:bg-gray-50"
+                   aria-label="Next page">
+                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </main>
 
 <!-- Newsletter -->
-<section class="bg-gray-100 py-12">
+<aside class="bg-gray-100 py-12" aria-label="Newsletter subscription">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-2xl font-bold text-dark mb-2">Stay Updated</h2>
         <p class="text-gray-600 mb-6">Get weekly updates on new featured channels in your favorite categories</p>
-        <div class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
-            <input type="email" placeholder="Your email address" class="flex-grow px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
-            <button class="bg-primary text-white px-6 py-2 rounded font-medium hover:bg-opacity-90 transition">Subscribe</button>
-        </div>
+        <form action="/subscribe" method="POST" class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+            <label for="email" class="sr-only">Email address</label>
+            <input type="email" id="email" name="email" placeholder="Your email address" required
+                   class="flex-grow px-4 py-2 rounded border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent">
+            <button type="submit"
+                    class="bg-primary text-white px-6 py-2 rounded font-medium hover:bg-opacity-90 transition">Subscribe
+            </button>
+        </form>
+        <p class="text-xs text-gray-500 mt-3">We respect your privacy. Unsubscribe at any time.</p>
     </div>
-</section>
+</aside>
 
 <!-- Footer -->
-<footer class="bg-dark text-white py-8">
+<footer class="bg-dark text-white py-8" role="contentinfo">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -236,55 +416,94 @@
             <div>
                 <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Platforms</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white text-sm">YouTube</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white text-sm">Facebook</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white text-sm">TikTok</a></li>
+                    <li><a href="/platforms/youtube" class="text-gray-400 hover:text-white text-sm">YouTube Channels</a>
+                    </li>
+                    <li><a href="/platforms/facebook" class="text-gray-400 hover:text-white text-sm">Facebook Pages</a>
+                    </li>
+                    <li><a href="/platforms/tiktok" class="text-gray-400 hover:text-white text-sm">TikTok Creators</a>
+                    </li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Categories</h4>
                 <ul class="space-y-2">
-                    <li><a href="#" class="text-gray-400 hover:text-white text-sm">Technology</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white text-sm">Education</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white text-sm">Entertainment</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white text-sm">Cooking</a></li>
-                    <li><a href="#" class="text-gray-400 hover:text-white text-sm">Fitness</a></li>
+                    <li><a href="/categories/technology" class="text-gray-400 hover:text-white text-sm">Technology</a>
+                    </li>
+                    <li><a href="/categories/education" class="text-gray-400 hover:text-white text-sm">Education</a>
+                    </li>
+                    <li><a href="/categories/entertainment"
+                           class="text-gray-400 hover:text-white text-sm">Entertainment</a></li>
+                    <li><a href="/categories/cooking" class="text-gray-400 hover:text-white text-sm">Cooking</a></li>
+                    <li><a href="/categories/fitness" class="text-gray-400 hover:text-white text-sm">Fitness</a></li>
                 </ul>
             </div>
             <div>
                 <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Connect</h4>
                 <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
+                    <a href="https://twitter.com/smartguide" class="text-gray-400 hover:text-white"
+                       aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/smartguide" class="text-gray-400 hover:text-white"
+                       aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://github.com/smartguide" class="text-gray-400 hover:text-white"
+                       aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
                 </div>
+                <h4 class="text-sm font-semibold uppercase tracking-wider mt-6 mb-4">Resources</h4>
+                <ul class="space-y-2">
+                    <li><a href="/blog" class="text-gray-400 hover:text-white text-sm">Blog</a></li>
+                    <li><a href="/about" class="text-gray-400 hover:text-white text-sm">About Us</a></li>
+                    <li><a href="/privacy" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a></li>
+                </ul>
             </div>
         </div>
         <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-            <p>© 2023 Smart-Guide. All rights reserved.</p>
+            <p>© <span id="current-year">2023</span> Smart-Guide. All rights reserved.</p>
         </div>
     </div>
 </footer>
 
 <!-- jQuery (for future interactivity) -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
 <script>
+    // Set current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
     // Basic filter functionality example
-    $(document).ready(function() {
+    $(document).ready(function () {
         // Platform tab switching
-        $('.platform-tab').click(function() {
+        $('.platform-tab').click(function () {
             $('.platform-tab').removeClass('border-primary text-primary').addClass('border-transparent text-gray-500');
             $(this).addClass('border-primary text-primary').removeClass('border-transparent text-gray-500');
             // Here you would filter the channels by platform
         });
 
         // Category filter
-        $('.category-btn').click(function() {
+        $('.category-btn').click(function () {
             $('.category-btn').removeClass('bg-primary text-white').addClass('bg-gray-200 text-gray-700');
             $(this).addClass('bg-primary text-white').removeClass('bg-gray-200 text-gray-700');
             // Here you would filter the channels by category
         });
     });
+</script>
+
+<!-- Schema.org for Organization -->
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Smart-Guide",
+        "url": "https://smart-guide.example.com",
+        "logo": "https://smart-guide.example.com/assets/logo.png",
+        "sameAs": [
+            "https://twitter.com/smartguide",
+            "https://instagram.com/smartguide",
+            "https://github.com/smartguide"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "contact@smart-guide.example.com",
+            "contactType": "customer service"
+        }
+    }
 </script>
 </body>
 </html>
